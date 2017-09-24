@@ -2,13 +2,10 @@ package org.tourofheroes.repositorio;
 
 import org.tourofheroes.dominio.Hero;
 
-import java.util.Optional;
+import java.util.List;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+public interface TourofHeroesRepository{
 
-
-public interface TourofHeroesRepository extends JpaRepository<Hero, String>{
-
-	public Optional<Hero> findById(int id);
+	public List<Hero> getHeroes();
 
 }
